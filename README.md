@@ -1,3 +1,3 @@
 To run application: 
 
-$> cd <application_directory> && npm install
+$> cd [project_directory] && npm install
