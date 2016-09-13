@@ -1,13 +1,19 @@
 html(ng-app='progressBar')
 	head
 		title Progress Bar!
-		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/bootstrap.css')
+		link(rel='stylesheet', href='css/style.css')
+
 	body
 		div(ng-controller='mainController')
-			.progress
-				.progress-bar.progress-bar-success.progress-bar-striped(role='progressbar', aria-valuenow='{{ progress }}', aria-valuemin='0', aria-valuemax='100', style='width: {{ progress }}%')
-					| {{ progress }}
-			input(type='button', ng-click='makeProgress()')
+			button.btn.btn-warning.pbButton.pull-right(type='button', ng-click='makeProgress()', style='z-index: 2038489790870983247597043')
+				| {{ btnText }}
+			.row.pbRow
+				.pbOuter.col-xs-8.col-xs-offset-2
+					.pbContainer
+						.progress
+							.progress-bar.progress-bar-success.progress-bar-striped(role='progressbar', aria-valuenow='{{ progress }}', aria-valuemin='0', aria-valuemax='100', style='width: {{ progress }}%')
+								| {{ progress }}
 		script(src='/js/jquery.js')
 		script(src='/js/bootstrap.js')
 		script(src='/js/angular.js')

@@ -6,6 +6,7 @@ var router = require('./router.js');
 
 // Static directories for templating.
 app.use('/css', express.static('./node_modules/bootstrap/dist/css/'));
+app.use('/css', express.static('./public/css'));
 app.use('/js', express.static('./public/js'));
 app.use('/js', express.static('./node_modules/bootstrap/dist/js/'));
 app.use('/js', express.static('./node_modules/angular/'));

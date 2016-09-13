@@ -1,0 +1,36 @@
+html, body {
+	border: 0;
+	padding: 0;
+	background-color: #0275d8;
+	background-image: radial-gradient(#1791fd, #0275d8);
+}
+
+.row {
+	margin: 0;
+}
+
+.pbOuter {
+	height: 100%;
+}
+
+.pbContainer {
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.progress {
+	width: 100%;
+}
+
+.pbRow {
+	height: 100%;
+}
+
+.pbButton {
+	z-index: 2038489790870983247597043;
+	margin: 10px;
+}
