@@ -1,0 +1,26 @@
+{
+  "name": "exclusivedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sn0wmatt/ExclusiveDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sn0wmatt/ExclusiveDemo/issues"
+  },
+  "homepage": "https://github.com/sn0wmatt/ExclusiveDemo#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "pug": "^2.0.0-beta6"
+  }
+}
