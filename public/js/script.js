@@ -1,14 +1,22 @@
 var progressBarApp = angular.module('progressBar', []);
+var socket = io.connect('127.0.0.1:1337/');
 
-progressBarApp.controller('mainController', function($scope) {
-	$scope.progress = 30;
-	$scope.direction = +1;
+progressBarApp.controller('mainController', $scope => {
 	$scope.btnText = "Interact";
-	$scope.makeProgress = function() {
-		$scope.progress += 10*$scope.direction;
 
-		// Simple as it gets
-		if ($scope.progress == 100) $scope.direction = -1;
-		if ($scope.progress == 0) $scope.direction = +1;
+	// -- $scope functions -- //
+		// ---------- makeProgress() ---------- //
+		// Emits a 'make progress' event, and   //
+		// increases the $scope.progress value. //
+		//--------------------------------------//
+	$scope.makeProgress = function() {
+		socket.emit('button click');
 	}
+
+	socket.on('data update', data => {
+		$scope.$apply(() => {
+			$scope.progress = data.progress;
+			$scope.direction = data.direction;
+		});
+	});
 });
